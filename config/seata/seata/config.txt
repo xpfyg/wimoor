@@ -70,7 +70,7 @@ store.mode=file
 store.lock.mode=file
 store.session.mode=file
 #Used for password encryption
-store.publicKey=
+#store.publicKey=
 
 #If `store.mode,store.lock.mode,store.session.mode` are not equal to `file`, you can remove the configuration block.
 store.file.dir=file_store/data
@@ -85,9 +85,9 @@ store.file.sessionReloadReadSize=100
 store.db.datasource=druid
 store.db.dbType=mysql
 store.db.driverClassName=com.mysql.jdbc.Driver
-store.db.url=jdbc:mysql://127.0.0.1:3306/seata?useUnicode=true&rewriteBatchedStatements=true
+store.db.url=jdbc:mysql://116.62.43.47:3306/seata?useUnicode=true&rewriteBatchedStatements=true
 store.db.user=root
-store.db.password=123456
+store.db.password=qwer1234
 #我增加了下面两个
 service.vgroupMapping.device=default #这里是固定写法将device修改成你的应用里面的application.yml里面的seata.tx-service-group名称
 service.vgroupMapping.task=default #
@@ -96,13 +96,13 @@ service.vgroupMapping.task=default #
 store.redis.mode=single
 store.redis.single.host=127.0.0.1
 store.redis.single.port=6379
-store.redis.sentinel.masterName=
-store.redis.sentinel.sentinelHosts=
+#store.redis.sentinel.masterName=
+#store.redis.sentinel.sentinelHosts=
 store.redis.maxConn=10
 store.redis.minConn=1
 store.redis.maxTotal=100
 store.redis.database=0
-store.redis.password=
+#store.redis.password=
 store.redis.queryLimit=100
 
 #Transaction rule configuration, only for the server

@@ -5,3 +5,6 @@ wimoor-common/target/
 wimoor-erp/target/
 wimoor-gateway/target/
 wimoor-shopee/target/
+.DS_Store
+.idea/
+config/

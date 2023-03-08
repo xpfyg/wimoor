@@ -7,16 +7,18 @@ spring:
     nacos:
       # 注册中心
       discovery:
-        server-addr: localhost:8848
+        server-addr: 116.62.43.47:8848
+        namespace: 907a6e46-afcd-4abd-a6bd-da0786f32c4f
       # 配置中心
       config:
         server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        namespace: 907a6e46-afcd-4abd-a6bd-da0786f32c4f
         file-extension: yaml
         # 公共配置
         shared-configs[0]: 
-          data-id: wimoor-common
+          data-id: wimoor-common.yaml
           refresh: true
         shared-configs[1]: 
-          data-id: wimoor-commom-ext
+          data-id: wimoor-commom-ext.yaml
           refresh: true
 

@@ -42,7 +42,7 @@ do
 done
 
 if [ -z ${host} ]; then
-    host=localhost
+    host=116.62.43.47
 fi
 if [ -z ${port} ]; then
     port=8848
@@ -99,7 +99,8 @@ function addConfig() {
 
 count=0
 COMMENT_START="#"
-for line in $(cat $(dirname "$PWD")/config.txt | sed s/[[:space:]]//g); do
+#for line in $(cat $(dirname "$PWD")/config.txt | sed s/[[:space:]]//g); do
+for line in $(cat $PWD/config.txt | sed s/[[:space:]]//g); do
     if [[ "$line" =~ ^"${COMMENT_START}".*  ]]; then
       continue
     fi

@@ -7,7 +7,7 @@
 		<artifactId>wimoor-all</artifactId>
 		<version>1.0.0</version>
 	</parent>
-	 
+
 	<artifactId>wimoor-amazon-adv</artifactId>
 	<name>wimoor-amazon-adv</name>
 	<description> for amazon adv</description>
@@ -30,7 +30,7 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
- 
+
          <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
@@ -43,29 +43,29 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
+
 		<dependency>
 		     <groupId>org.springframework.boot</groupId>
 		     <artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.restdocs</groupId>
 			<artifactId>spring-restdocs-mockmvc</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+
 		  <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-        
+
         <dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-jdbc</artifactId>
@@ -74,57 +74,64 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
- 
+
 		 <!--mysql-->
-         <dependency>  
-            <groupId>mysql</groupId>  
-            <artifactId>mysql-connector-java</artifactId>  
-            <version>8.0.21</version> 
-        </dependency> 
- 
+         <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.21</version>
+        </dependency>
+
  	<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
-			<dependency>
-			    <groupId>org.mybatis</groupId>
-			    <artifactId>mybatis</artifactId>
-			    <version>3.4.6</version>
-			</dependency>
-          <dependency>
-                   <groupId>org.mybatis.spring.boot</groupId>
-                   <artifactId>mybatis-spring-boot-starter</artifactId>
-                   <version>1.2.0</version>
-              </dependency>  
+<!--			<dependency>-->
+<!--			    <groupId>org.mybatis</groupId>-->
+<!--			    <artifactId>mybatis</artifactId>-->
+<!--			    <version>3.4.6</version>-->
+<!--			</dependency>-->
+<!--          <dependency>-->
+<!--                   <groupId>org.mybatis.spring.boot</groupId>-->
+<!--                   <artifactId>mybatis-spring-boot-starter</artifactId>-->
+<!--                   <version>1.2.0</version>-->
+<!--		  </dependency>-->
 			  <!-- https://mvnrepository.com/artifact/com.github.miemiedev/mybatis-paginator -->
-			<dependency>
-			    <groupId>com.github.miemiedev</groupId>
-			    <artifactId>mybatis-paginator</artifactId>
-			    <version>1.2.17</version>
-			</dependency>
 			   <!--通用Mapper-->
 			<dependency>
 			    <groupId>com.github.miemiedev</groupId>
 			    <artifactId>mybatis-paginator</artifactId>
 			    <version>1.2.17</version>
+				<exclusions>
+					<exclusion>
+						<artifactId>mybatis</artifactId>
+						<groupId>org.mybatis</groupId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 	        <dependency>
 	            <groupId>tk.mybatis</groupId>
 	            <artifactId>mapper</artifactId>
 	            <version>4.0.2</version>
 	        </dependency>
-	        <dependency>
-	            <groupId>tk.mybatis</groupId>
-	            <artifactId>mapper-spring-boot-starter</artifactId>
-	            <version>2.0.3</version>
-	        </dependency>
-        
+<!--	        <dependency>-->
+<!--	            <groupId>tk.mybatis</groupId>-->
+<!--	            <artifactId>mapper-spring-boot-starter</artifactId>-->
+<!--	            <version>2.0.3</version>-->
+<!--				<exclusions>-->
+<!--					<exclusion>-->
+<!--						<artifactId>mybatis</artifactId>-->
+<!--						<groupId>org.mybatis</groupId>-->
+<!--					</exclusion>-->
+<!--				</exclusions>-->
+<!--			</dependency>-->
+
 			  <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis-spring -->
-			<dependency>
-			    <groupId>org.mybatis</groupId>
-			    <artifactId>mybatis-spring</artifactId>
-			    <version>1.3.2</version>
-			</dependency>
- 
-	 
-		
+<!--			<dependency>-->
+<!--			    <groupId>org.mybatis</groupId>-->
+<!--			    <artifactId>mybatis-spring</artifactId>-->
+<!--			    <version>1.3.2</version>-->
+<!--			</dependency>-->
+
+
+
 		<dependency>
 		   <groupId>com.lowagie</groupId>
 		   <artifactId>itext</artifactId>
@@ -135,7 +142,7 @@
 		   <artifactId>itext-rtf</artifactId>
 		   <version>2.1.7</version>
 		</dependency>
-		
+
      <!-- itext核心jar包 -->
  		 <dependency>
      		<groupId>com.itextpdf</groupId>
@@ -153,10 +160,6 @@
      		<version>1.54</version>
 		 </dependency>
         <!--lombok用来简化实体类：需要安装lombok插件-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
 		 <!-- https://mvnrepository.com/artifact/com.googlecode.aviator/aviator -->
 		<dependency>
 		    <groupId>com.googlecode.aviator</groupId>
@@ -168,13 +171,13 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.28</version>
         </dependency>
- 
+
         <!--gson-->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
         </dependency>
-        
+
         <!-- Ehcache -->
 		<dependency>
 		    <groupId>net.sf.ehcache</groupId>
@@ -185,7 +188,7 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
- 
+
         <dependency>
             <groupId>org.crazycake</groupId>
             <artifactId>shiro-redis</artifactId>
@@ -200,30 +203,30 @@
 		    <groupId>org.jsoup</groupId>
 		    <artifactId>jsoup</artifactId>
 		    <version>1.10.2</version>
-		</dependency>	
+		</dependency>
 			<dependency>
 			    <groupId>org.springframework.boot</groupId>
 			    <artifactId>spring-boot-starter-freemarker</artifactId>
 			</dependency>
-        
+
           <dependency>
 		    <groupId>commons-net</groupId>
 		    <artifactId>commons-net</artifactId>
 		    <version>3.6</version>
 		</dependency>
-		
+
 		<dependency>
 		    <groupId>commons-io</groupId>
 		    <artifactId>commons-io</artifactId>
 		    <version>2.4</version>
 		</dependency>
-		
+
 		<dependency>
 	        <groupId>commons-dbcp</groupId>
 	        <artifactId>commons-dbcp</artifactId>
 	        <version>1.4</version>
         </dependency>
-        
+
 		 <!--swagger3-->
 		 <dependency>
 		    <groupId>io.springfox</groupId>
@@ -235,22 +238,22 @@
 		    <groupId>com.wimoor</groupId>
 		    <artifactId>wimoor-common</artifactId>
 		    <version>1.0.0</version>
-		    <exclusions>
-		        <exclusion>  <!-- declare the exclusion here -->
-		            <groupId>com.baomidou</groupId>
-		            <artifactId>mybatis-plus</artifactId>
-		        </exclusion>
-		        <exclusion>  <!-- declare the exclusion here -->
-		            <groupId>com.baomidou</groupId>
-		            <artifactId>mybatis-plus-boot-starter</artifactId>
-		        </exclusion>
-		        <exclusion>  <!-- declare the exclusion here -->
-		            <groupId>com.baomidou</groupId>
-		            <artifactId>mybatis-plus-extension</artifactId>
-		        </exclusion>
-		      </exclusions> 
+<!--		    <exclusions>-->
+<!--		        <exclusion>  &lt;!&ndash; declare the exclusion here &ndash;&gt;-->
+<!--		            <groupId>com.baomidou</groupId>-->
+<!--		            <artifactId>mybatis-plus</artifactId>-->
+<!--		        </exclusion>-->
+<!--		        <exclusion>  &lt;!&ndash; declare the exclusion here &ndash;&gt;-->
+<!--		            <groupId>com.baomidou</groupId>-->
+<!--		            <artifactId>mybatis-plus-boot-starter</artifactId>-->
+<!--		        </exclusion>-->
+<!--		        <exclusion>  &lt;!&ndash; declare the exclusion here &ndash;&gt;-->
+<!--		            <groupId>com.baomidou</groupId>-->
+<!--		            <artifactId>mybatis-plus-extension</artifactId>-->
+<!--		        </exclusion>-->
+<!--		      </exclusions>-->
 		</dependency>
-		
+
 	   <dependency>
 		    <groupId>org.dom4j</groupId>
 		    <artifactId>dom4j</artifactId>
@@ -279,10 +282,10 @@
       <!-- https://mvnrepository.com/artifact/com.googlecode.aviator/aviator -->
 	<dependency>
 	    <groupId>com.googlecode.aviator</groupId>
-	    <artifactId>aviator</artifactId> 
+	    <artifactId>aviator</artifactId>
 	    <version>3.0.0</version>
 	</dependency>
- 
+
 	</dependencies>
 
 	 <build>
@@ -295,7 +298,7 @@
                      <source>1.8</source>
                      <target>1.8</target>
                  </configuration>
-            </plugin>		
+            </plugin>
         </plugins>
     </build>
 </project>
